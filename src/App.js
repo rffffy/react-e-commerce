@@ -14,8 +14,8 @@ import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up
 import CheckoutPage from "./pages/checkout/checkout.component";
 
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
-import { setCurrentUser } from "./redux/user/user.actions";
 
+import { setCurrentUser } from "./redux/user/user.actions";
 import { selectCurrentUser } from "./redux/user/user.selectors";
 
 class App extends Component {
@@ -34,13 +34,8 @@ class App extends Component {
 						...snapshot.data()
 					});
 				});
-			} else {
-				setCurrentUser(userAuth);
 			}
-			// console.log(userAuth);
-			// this.setState({ currentUser: userAuth });
-			// createUserProfileDocument(userAuth);
-			// console.log(user);
+			setCurrentUser(userAuth);
 		});
 	}
 
