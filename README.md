@@ -4,4 +4,4 @@
 
 This is an e-commerce website.
 
-Technologies used React, React Router, Redux, Redux-Saga, Firebase and Stripe API.
+Built using React, React Router, Redux, Redux-Saga, Firebase and Stripe API.
